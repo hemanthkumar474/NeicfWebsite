@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" ng-app="headerApp">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="css/calendar.css" media="screen">
+
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>Neicf</title>
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<!-- CSS Style -->
+<link rel="stylesheet" href="css/all.css" type="text/css" media="all">
+<!-- ResponsiveCSS Style -->
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
+<!-- CSS ShortCode -->
+<link rel="stylesheet" href="css/shortcode.css" type="text/css" media="all">
+<!-- Start JavaScript -->
+<link rel="stylesheet" href="css/javascri.css" type="text/css" media="all">
+<!-- gallery CSS -->
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
+<!-- Start Player CSS -->
+<link rel="stylesheet" href="css/player.css" type="text/css" media="all">
+<!-- Style Switcher CSS -->
+<link rel="stylesheet" href="css/default.css" id="stylesheet">
+<!-- Megamenu CSS -->
+<link rel="stylesheet" href="css/megamenu.css" type="text/css" media="screen" />
+ <!-- Angular Js -->
+    <script src="js/angular.min.js"></script>
+    <script src="views-js/app.js"></script>
+<script type="text/javascript">
+    function changeStyle(url) {
+        document.getElementById('stylesheet').href = 'css/' + url;
+    }
+</script>
+
+<!-- End JavaScript -->
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<ul id="sheetswitch">
+  <li><a href="#" class="default" onClick="changeStyle('default.css');return false;" >black</a></li>
+  <li><a href="#" class="blue" onClick="changeStyle('blue.css');return false;" >white</a></li>
+  <li><a href="#" class="green" onClick="changeStyle('green.css');return false;" >white</a></li>
+  <li><a href="#" class="perpul" onClick="changeStyle('perpul.css');return false;" >white</a></li>
+  <li><a href="#" class="brown" onClick="changeStyle('brown.css');return false;" >white</a></li>
+</ul>
+<div class="wrapper"> 
+  <!-- header -->
+  <div class="main">
+    <div class="head-banner"  ng-controller="headerCtrl">
+       
+      <header id="header">
+        <div class="header-wrapper">
+            <header-menu></header-menu>
+        </div>
+      </header>
+
+   </div>
+    
+    <!-- Content -->
+    
+    <div class="content">
+      <section class="grid-holder church-events">
+           <div class="heading-holder">
+            <h3 class="content-heading"><span><em class="h-left"></em><span class="inner-heading">Up Coming Events</span><em class="h-right"></em></span></h3>
+          </div>
+        <section class="grid" ng-controller="eventsCtrl" >
+         <div ng-repeat="event in events">
+          <div class="church-event">
+            <article class="column c-one-third event-post blog">
+              <div class="about-box">
+                <div class="img-holder slide-1"><img src="{{event.image}}" alt="image" /></div>
+                <!--<span class="church-theme">Posted In : <em>Church Theme</em></span> </div>-->
+            </article>
+            <article class="column c-three-fourth event-post blog">
+              <div class="blog-post">
+                <div class="blog-holder event-holder"> <strong class="name">{{event.servicename}}</strong>
+                  <div class="event-detail"> <span class="church-theme">On :<em> {{event.month}}-{{event.date}}-{{event.year}}</em></span> <span class="church-theme">Time :<em>{{event.starttime}} to {{event.endtime}}</em></span> <span class="church-theme">Speaker:<em> {{event.speaker}}</em></span> </div>
+                  <div class="event-detail">
+                    <!--<div class="contact-box">
+                      <p>{{event.desc}}</p>
+                    </div>-->
+                   <span class="church-theme">Location: <em>{{event.location}}</em> </span><span ng-if="event.desc!=''" class="church-theme"> Desc: <em>{{event.desc}} </em></span> 
+                   <div ng-if="event.url!=''" class="read-more"><a href="{{event.url}}">Read More</a></div>
+                  </div>
+                  <div class="right">
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+             </div>
+           <!--<ul class="pagination">
+            <li><a href="#">&lt;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&gt;</a></li>
+          </ul>-->
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-holder">
+      <div class="footer-frame">
+        <div class="top">
+          <div class=" holder">
+            <div class="music-bar">
+              <audio class="projekktor1 speaker dark">
+                <source src="playlist.json" type="application/json"/>
+              </audio>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class=" holder">
+            <section class="grid-holder">
+              <section class="grid">
+                  <article class="column c-one-fifth"></article>
+                      
+                <article class="column c-one-fifth">
+                  <div class="box">
+                    <h5>MONTHLY FELLOWSHIP TIMINGS</h5>
+                    <strong class="day">EVERY FOURTH SATURDAY</strong>
+                    <ul class="list">
+                      <li>Evening 5:00 pm</li>
+                      <li>Evening 7:00 pm</li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="column c-one-fifth">
+                  <div class="box">
+                    <h5>OUR MONTHLY FELLOWSHIP ADDRESS</h5>
+                    <address>
+                    <span>Grace Baptist Church, Hudson, MA.</span>
+                    </address>
+                </article>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/jquery-1.js"></script><!-- jQuery library --> 
+<script type="text/javascript" src="js/jquery.slideshow.js"></script><!-- jQuery main banner --> 
+<script src="js/jquery-u.js"></script><!-- jQuery Ui --> 
+<script src="js/sourtin-jquery.js"></script><!-- sourtin-jquery --> 
+<script src="js/jqueryi-icon-menu.js"></script><!-- Js For all Small Style  --> 
+<script src="js/tytabs.js"></script><!-- jQuery Plugin tytabs  --> 
+<script type="text/javascript" src="js/speakker-big-1.2.02r134.min.js"></script> 
+<script type="text/javascript" src="js/jquery-inner-slider.js"></script><!-- inner-slider --> 
+<script src="js/jquery.timelinr-0.9.52.js"></script><!-- timline-slider --> 
+<script src="js/browser-detect.js"></script> <!-- Browser-Detect --> 
+<script src="js/sticky-header.js"></script> <!-- Sticky-header --> 
+<script src="js/jquery.countdown.js"></script>
+</body>
+</html>
