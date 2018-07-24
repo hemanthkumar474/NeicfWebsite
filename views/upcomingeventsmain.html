@@ -1,0 +1,16 @@
+﻿     <article class="events calender-box" ng-controller="eventsCtrl">
+        <div class="img-details">
+          <ul id="s3" ng-repeat="e in events">
+            <li><img src="{{e.image}}" alt="image" />
+              <div class="info-1">
+                <div class="left"><span class="info-heading">{{e.servicename}}</span>
+                  <p>{{e.location}}</p>
+                </div>
+                <a href="event-detail.html" class="btn-a">Event Details</a> </div>
+            </li>
+          
+          </ul>
+        </div>
+        <img alt="shade" class="shade" src="images/bottom-shade.png"> 
+
+     </article>

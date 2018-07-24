@@ -1,0 +1,14 @@
+﻿<div class="about-box" ng-controller="eventsCtrl">
+    <div class="right-sidebar">
+        <div class="sidebar-h"><strong class="right-heading"><span>Up coming Events</span></strong></div>
+        <ul class="comments" ng-repeat="e in events | limitTo:5">
+            <li>
+                <div class="clock" >{{e.date}} <span>{{e.month}}</span></div>
+                <a href="#" class="worship">{{e.servicename}}</a>
+                <p>{{e.starttime}} - {{e.endtime}}</p>
+            </li>
+        </ul>
+        <a href="event-detail.html" class="vies-calender">View Full Event Calender</a>
+    </div>
+
+</div>

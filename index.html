@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" ng-app="headerApp">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="css/calendar.css" media="screen">
+
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>NEICF</title>
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<meta name="description" content>
+<meta name="author" content>
+<link rel="icon"
+type="image/png"
+href="images/Logos/logo2.png">
+<!-- CSS Style -->
+<link rel="stylesheet" href="css/all.css" type="text/css" media="all">
+<!-- ResponsiveCSS Style -->
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
+<!-- CSS ShortCode -->
+<link rel="stylesheet" href="css/shortcode.css" type="text/css" media="all">
+<!-- Start JavaScript -->
+<link rel="stylesheet" href="css/javascri.css" type="text/css" media="all">
+<!-- gallery CSS -->
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
+<!-- Start Player CSS -->
+<link rel="stylesheet" href="css/player.css" type="text/css" media="all">
+<!-- Style Switcher CSS -->
+<link rel="stylesheet" href="css/default.css" id="stylesheet">
+<!-- Megamenu CSS -->
+<link rel="stylesheet" href="css/megamenu.css" type="text/css" media="screen" />
+<!-- Angular Js -->
+<script src="js/angular.min.js"></script>
+<script src="views-js/app.js"></script>
+<script type="text/javascript">
+function changeStyle(url) {
+document.getElementById('stylesheet').href ='css/'+url;
+}
+</script>
+
+<!-- End JavaScript -->
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<ul id="sheetswitch">
+  <li><a href="#" class="default" onClick="changeStyle('default.css');return false;" >black</a></li>
+  <li><a href="#" class="blue" onClick="changeStyle('blue.css');return false;" >white</a></li>
+  <li><a href="#" class="green" onClick="changeStyle('green.css');return false;" >white</a></li>
+  <li><a href="#" class="perpul" onClick="changeStyle('perpul.css');return false;" >white</a></li>
+  <li><a href="#" class="brown" onClick="changeStyle('brown.css');return false;" >white</a></li>
+</ul>
+<div class="wrapper"> 
+  <!-- header -->
+  <div class="main">
+    <div class="head-banner"  ng-controller="headerCtrl">
+       
+      <header id="header">
+        <div class="header-wrapper">
+            <header-menu></header-menu>
+        </div>
+      </header>
+
+                
+      <div class="gallery-holder slideshow">
+        <div class="gallery">
+          <div class="gholder"> <a class="btn-prev" href="#">next</a>
+            <div class="gmask">
+              <ul ng-repeat="banner in bannerGallery">
+                  <li><img src="{{banner}}" alt="image" />
+                  <div class="left">
+    <div class="banner-caption" >
+        <a href="#" id="ourmanna-verse"></a>
+        <script src="http://www.ourmanna.com/verses/api/js?order=random" type="text/javascript"></script>
+    </div>
+                      </div>
+
+                </li>
+              </ul>
+                
+            </div>
+            <a class="btn-next" href="#">next</a> </div>
+          <div class="pagination">
+            <ul>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+            </ul>
+          </div>
+        </div>
+        <span class="banner-bottom2"><img src="images/banner-bottom.png" alt=""></span> </div>
+    </div>
+    <!-- Content -->
+    <div class="content mt0">
+        
+          <section class="grid-holder">
+        <section class="grid">
+          <article class="column c-one-third">
+            <div class="post">
+              <h4>ABOUT NEICF</h4>
+              <p>NEICF is a telugu fellowship in New England area. We gather every fourth Saturday. We have an all night prayer on the second friday each month, in the home which is open for the all night prayer. We pray for the family which opened its home, pray for all our fellowship families, pray for all prayer requests that we have received.</p>
+              <div class="read-more"><a href="about.html">Read More</a></div>
+            </div>
+          </article>
+          <article class="column c-one-third">
+            <div class="post">
+              <ul class="post-slide" id="s1">
+                <!--<li>
+                  <h4>TESTIMONIALS</h4>
+                  <strong class="top-line">Bro. Bakht Singh</strong>
+                  <p>Bakht Singh Chabra (1903-2000) is considered one of the most exceptional preacher, bible teacher and evangelist from India. He is also one of the pioneers of Indigenous Church planting movement and contexualization of gospel of Jesus Christ to Indian culture. </p>
+                  <span class="tech-text">Collected from Internet in <em>http://www.jeevanmarg.com/testimonies</em></span></li>-->
+                   <li>
+                      <h4>MEMORY VERSE</h4>
+                      <strong class="top-line heading-orange">Deuteronomy 8:3-4</strong>
+                      <p>3. He humbled you, causing you to hunger and then feeding you with manna, which neither you nor your ancestors had known, to teach you that man does not live on bread alone but on every word that comes from the mouth of the Lord. 4. Your clothes did not wear out and your feet did not swell during these forty years.</p>
+                      <span class="tech-text"><em>NIV</em></span>
+                  </li>
+                  <li>
+                      <h4>MEMORY VERSE</h4>
+                      <strong class="top-line heading-orange">Hebrews 4:16</strong>
+                      <p>Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.</p>
+                      <span class="tech-text"><em>NIV</em></span>
+                  </li>
+                  <li>
+                      <h4>MEMORY VERSE</h4>
+                      <strong class="top-line heading-orange">James 4:6</strong>
+                      <p>But he gives us more grace. That is why Scripture says:“God opposes the proud but shows favor to the humble.</p>
+                      <span class="tech-text"><em>NIV</em></span>
+                  </li>
+ 
+              </ul>
+              <a href="#" class="arrow-left">left</a> <a href="#" class="arrow-last-right">right</a> </div>
+          </article>
+            <article class="column c-one-third">
+             <events-Side-Menu></events-Side-Menu>
+          </article>
+        </section>
+      </section>
+
+      <section class="grid-holder">
+        <section class="grid">
+          <div class="heading-holder">
+            <h3 class="content-heading"><span><em class="h-left"></em><span class="inner-heading">OUR services</span><em class="h-right"></em></span></h3>
+          </div>
+          <article class="column c-one-fourth service-box">
+            <div class="new-box">
+              <div class="ch-item ch-img-1">
+                <div class="ch-info">
+                  <h4><a href="#">Pray To God</a></h4>
+                  <p>Every Second Friday Night</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p>who ever call on me and come and pray to me, and I will listen to you. (Jeremiah 29:12)</p>
+            </div>
+          </article>
+          <article class="column c-one-fourth service-box">
+            <div class="new-box">
+              <div class="ch-item ch-img-2">
+                <div class="ch-info">
+                  <h4><a href="#">KEEP FAITH</a></h4>
+                  <p>keep failth in The Lord Jesus Christ.</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p>Whoever believes in the Son has eternal life (John 3:36).</p>
+            </div>
+          </article>
+          <article class="column c-one-fourth service-box">
+            <div class="new-box">
+              <div class="ch-item ch-img-3">
+                <div class="ch-info">
+                  <h4><a href="#">BLIND TRUST</a></h4>
+                  <p>Trust in the Lord with all your heart. </p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p>Trust in the Lord with all your heart; do not depend on your own understanding (Proverbs 3:5)</p>
+            </div>
+          </article>
+          <article class="column c-one-fourth service-box">
+            <div class="new-box">
+              <div class="ch-item ch-img-4">
+                <div class="ch-info">
+                  <h4><a href="#">OBEY RULES</a></h4>
+                  <p>Obey his commandments</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p>If you love me, keep my commands.(John 14:15)</p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+             
+      <section class="grid-holder">
+        <section class="grid">
+          <div class="heading-holder">
+            <h3 class="content-heading"><span><em class="h-left"></em><span class="inner-heading">OUR GALLERY</span><em class="h-right"></em></span></h3>
+          </div>
+          <article class="column c-one-third">
+            <div class="img-holder slide-1"> <a href="staff.html"><img src="images/Gallery/ISW2016.JPG" alt="image" /></a> </div>
+          </article>
+          <article class="column c-one-third">
+            <div class="img-holder slide-1"> <a href="staff.html"><img src="images/Gallery/CFC2016.JPG" alt="image" /></a> </div>
+          </article>
+          <article class="column c-one-third">
+            <div class="img-holder slide-1"> <a href="staff.html"><img src="images/Gallery/CFC-TROPHIES-2016.JPG" alt="image" /></a> </div>
+          </article>
+        </section>
+      </section>
+      
+      
+    </div>
+  </div>
+   
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-holder">
+      <div class="footer-frame">
+        <div class="top">
+          <div class=" holder">
+            <div class="music-bar">
+              <audio class="projekktor1 speaker dark" controls>
+                <source src="junk/deevanaih_tcfnj_2016.mp3"/>
+              </audio>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class=" holder">
+            <section class="grid-holder">
+              <section class="grid">
+                  <article class="column c-one-fifth"></article>
+                      
+                <article class="column c-one-fifth">
+                  <div class="box">
+                    <h5>MONTHLY FELLOWSHIP TIMINGS</h5>
+                    <strong class="day">EVERY FOURTH SATURDAY</strong>
+                    <ul class="list">
+                      <li>Evening 5:00 pm</li>
+                      <li>Evening 7:00 pm</li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="column c-one-fifth">
+                  <div class="box">
+                    <h5>OUR MONTHLY FELLOWSHIP ADDRESS</h5>
+                    <address>
+                    <span>Grace Baptist Church, Hudson, MA.</span>
+                    </address>
+                </article>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="js/jquery-1.js"></script><!-- jQuery library --> 
+<script type="text/javascript" src="js/jquery.slideshow.js"></script><!-- jQuery main banner --> 
+<script src="js/jquery-u.js"></script><!-- jQuery Ui --> 
+<script src="js/sourtin-jquery.js"></script><!-- sourtin-jquery --> 
+<script src="js/jqueryi-icon-menu.js"></script><!-- Js For all Small Style  --> 
+<script src="js/tytabs.js"></script><!-- jQuery Plugin tytabs  --> 
+<script type="text/javascript" src="js/speakker-big-1.2.02r134.min.js"></script> 
+<script type="text/javascript" src="js/jquery-inner-slider.js"></script><!-- inner-slider --> 
+<script src="js/jquery.timelinr-0.9.52.js"></script><!-- timline-slider --> 
+<script src="js/browser-detect.js"></script> <!-- Browser-Detect --> 
+<script src="js/sticky-header.js"></script> <!-- Sticky-header --> 
+<script src="js/jquery.countdown.js"></script>
+</body>
+</html>
